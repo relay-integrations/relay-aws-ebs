@@ -1,0 +1,6 @@
+apiVersion: container/v1
+kind: StepContainer
+inherit: ../hack/defs/aws-python
+title: Deletes AWS EBS volumes
+description: >
+  This task deletes a given list of EBS volumes.
