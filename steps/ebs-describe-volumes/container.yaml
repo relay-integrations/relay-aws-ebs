@@ -1,6 +1,0 @@
-apiVersion: container/v1
-kind: StepContainer
-inherit: ../hack/defs/aws-python
-title: Describe AWS EBS volumes
-description: >
-  This task describes the EBS volumes in a given account and region.

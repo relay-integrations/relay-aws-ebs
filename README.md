@@ -8,8 +8,8 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [ebs-delete-volumes](/steps/ebs-delete-volumes)  | 
-| Step      | [ebs-describe-volumes](/steps/ebs-describe-volumes)    | 
+| Step      | [aws-ebs-step-volumes-delete](/steps/aws-ebs-step-volumes-delete)  | 
+| Step      | [aws-ebs-step-volumes-describe](/steps/aws-ebs-step-volumes-delete)    | 
 
 
 ## Contributing
