@@ -1,0 +1,18 @@
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "volumes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "The volumes in the given region."
+    }
+  },
+  "required": [
+    "volumes"
+  ],
+  "additionalProperties": false
+}
