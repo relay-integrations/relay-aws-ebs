@@ -51,6 +51,7 @@ examples:
   - summary: describe your AWS EBS volumes
     content:
       apiVersion: 1
+      kind: Step
       name: describe-instances
       image: relaysh/aws-ebs-step-volumes-describe
       spec: 
