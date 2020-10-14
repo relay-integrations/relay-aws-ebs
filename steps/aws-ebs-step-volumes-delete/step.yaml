@@ -45,7 +45,7 @@ schemas:
     file: spec.schema.json
 
 examples:
-  - summary: 
+  - summary: delete a single AWS EBS volume. 
     content:
       apiVersion: 1
       kind: Step
