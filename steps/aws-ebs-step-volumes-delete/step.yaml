@@ -54,6 +54,6 @@ examples:
       spec:
         aws:
           connection: !Connection { type: aws, name: my-aws-account }
-          region: !Parameter awsRegion
+          region: us-east-1
         volumeIDs:
         - !Parameter volumeID
