@@ -44,3 +44,16 @@ schemas:
     source: file
     file: spec.schema.json
 
+examples:
+  - summary: 
+    content:
+      apiVersion: 1
+      kind: Step
+      name: ebs-delete-volumes
+      image: relaysh/aws-ebs-step-volumes-delete
+      spec:
+        aws:
+          connection: !Connection { type: aws, name: my-aws-account }
+          region: !Parameter awsRegion
+        volumeIDs:
+        - !Parameter volumeID
