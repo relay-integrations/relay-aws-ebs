@@ -46,3 +46,15 @@ schemas:
   output:
     source: file
     file: output.schema.json
+
+examples:
+  - summary: describe your AWS EBS volumes
+    content:
+      apiVersion: 1
+      kind: Step
+      name: describe-instances
+      image: relaysh/aws-ebs-step-volumes-describe
+      spec: 
+        aws:
+          connection: !Connection { type: aws, name: my-aws-account }
+          region: !Parameter awsRegion
