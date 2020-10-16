@@ -40,7 +40,7 @@ publish:
   repository: relaysh/aws-ebs-step-volumes-describe
 
 schemas:
-  spec: 
+  spec:
     source: file
     file: spec.schema.json
   output:
@@ -50,11 +50,11 @@ schemas:
 examples:
   - summary: describe your AWS EBS volumes
     content:
-      apiVersion: 1
+      apiVersion: v1
       kind: Step
       name: describe-instances
       image: relaysh/aws-ebs-step-volumes-describe
-      spec: 
+      spec:
         aws:
           connection: !Connection { type: aws, name: my-aws-account }
           region: !Parameter awsRegion

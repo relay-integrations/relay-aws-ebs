@@ -35,19 +35,19 @@ build:
 
   # The builder to use. Required.
   kind: Docker
-  
+
 publish:
   repository: relaysh/aws-ebs-step-volumes-delete
 
 schemas:
-  spec: 
+  spec:
     source: file
     file: spec.schema.json
 
 examples:
-  - summary: delete a single AWS EBS volume. 
+  - summary: delete a single AWS EBS volume.
     content:
-      apiVersion: 1
+      apiVersion: v1
       kind: Step
       name: ebs-delete-volumes
       image: relaysh/aws-ebs-step-volumes-delete
