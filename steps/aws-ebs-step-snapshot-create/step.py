@@ -1,22 +1,8 @@
 #!/usr/bin/env python
 import boto3
 from nebula_sdk import Interface, Dynamic as D
-from functools import partial
-import logging 
-import pprint
 
 relay = Interface()
-
-def snapshot_to_dict(ec2, snapshot):
-    shape = ec2.meta.client.meta.service_model.shape_for('Snapshot')
-    attrs = snapshot.meta.resource_model.get_attributes(shape)
-
-    d = {}
-    for mapped, (name, shape) in attrs.items():
-        d[name] = getattr(snapshot, mapped)
-
-    return d
-
 
 session_token = None
 try:
