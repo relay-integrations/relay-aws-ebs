@@ -70,3 +70,6 @@ print("\nSuccess! Created the following snapshot: \n")
 print("{:<30} {:<30} {:<30}".format('ID', 'STATE', 'DESCRIPTION'))
 print("{:<30} {:<30} {:<30}".format(response.snapshot_id, response.state, response.description))
 
+
+print("\nSetting output `snapshot_id` with the snapshot id.")
+relay.outputs.set('snapshot_id', response.snapshot_id)
