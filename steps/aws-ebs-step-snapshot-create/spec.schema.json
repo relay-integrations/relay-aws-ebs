@@ -36,17 +36,14 @@
         "region"
       ]
     },
-    "volumeIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The list of EBS volume IDs identifying the volumes to terminate."
+    "volumeID": {
+      "type": "string",
+      "description": "The EBS volume ID to snapshot."
     }
   },
   "required": [
     "aws",
-    "volumeIDs"
+    "volumeID"
   ],
   "additionalProperties": false
 }
