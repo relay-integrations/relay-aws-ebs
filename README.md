@@ -10,6 +10,7 @@ The following are supported actions:
 |-----------|--------------------|
 | Step      | [aws-ebs-step-volumes-delete](/steps/aws-ebs-step-volumes-delete)  | 
 | Step      | [aws-ebs-step-volumes-describe](/steps/aws-ebs-step-volumes-delete)    | 
+| Step      | [aws-ebs-step-snapshots-describe](/steps/snapshots-delete)    | 
 
 
 ## Contributing
