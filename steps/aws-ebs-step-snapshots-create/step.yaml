@@ -7,18 +7,18 @@ kind: Step
 
 # The name of the action. Required. Must be exactly the name of the directory
 # containing the action.
-name: aws-ebs-step-snapshot-delete
+name: aws-ebs-step-snapshots-create
 
 # The version of the action. Required. Must be an integer. If specified in the
 # directory name, must be exactly the version in the directory name.
 version: 1
 
 # High-level phrase describing what this action does. Required.
-summary: Delete snapshots
+summary: Create snapshot
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
-description: This AWS EBS step container deletes a list of Snapshot IDs
+description: This AWS EBS step container creates a snapshot of an EBS volume.
 
 
 # URL or path relative to this file to an icon or icons representing this
@@ -37,23 +37,28 @@ build:
   kind: Docker
 
 publish:
-  repository: relaysh/aws-ebs-step-snapshot-delete
+  repository: relaysh/aws-ebs-step-snapshots-create
 
 schemas:
   spec:
     source: file
     file: spec.schema.json
+  output:
+    source: file
+    file: output.schema.json 
 
 examples:
-  - summary: Delete a single AWS EBS snapshot.
+  - summary: Create an EBS snapshot
     content:
       apiVersion: v1
       kind: Step
-      name: ebs-delete-snapshot
-      image: relaysh/aws-ebs-step-snapshot-delete
+      name: ebs-create-snapshot
+      image: relaysh/aws-ebs-step-snapshots-create
       spec:
         aws:
           connection: !Connection { type: aws, name: my-aws-account }
           region: !Parameter awsRegion
-        snapshotIDs:
-        - !Parameter snapshotID
+        volumeID: !Parameter volumeID
+        description: !Parameter snapshotDescription 
+        tags: 
+          key1: value1

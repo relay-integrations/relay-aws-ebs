@@ -7,19 +7,19 @@ kind: Step
 
 # The name of the action. Required. Must be exactly the name of the directory
 # containing the action.
-name: aws-ebs-step-snapshot-create
+name: snapshots-describe
 
 # The version of the action. Required. Must be an integer. If specified in the
 # directory name, must be exactly the version in the directory name.
 version: 1
 
 # High-level phrase describing what this action does. Required.
-summary: Create snapshot
+summary: Describe EBS snapshots
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
-description: This AWS EBS step container creates a snapshot of an EBS volume.
-
+description: |
+  Lists the EBS snapshots in the provided AWS region and account.
 
 # URL or path relative to this file to an icon or icons representing this
 # action. Optional. Defaults to the integration icon.
@@ -37,28 +37,24 @@ build:
   kind: Docker
 
 publish:
-  repository: relaysh/aws-ebs-step-snapshot-create
+  repository: relaysh/aws-ebs-step-snapshots-describe
 
 schemas:
-  spec:
+  spec: 
     source: file
     file: spec.schema.json
   output:
     source: file
-    file: output.schema.json 
+    file: output.schema.json
 
 examples:
-  - summary: Create an EBS snapshot
-    content:
-      apiVersion: v1
-      kind: Step
-      name: ebs-create-snapshot
-      image: relaysh/aws-ebs-step-snapshot-create
-      spec:
-        aws:
-          connection: !Connection { type: aws, name: my-aws-account }
-          region: !Parameter awsRegion
-        volumeID: !Parameter volumeID
-        description: !Parameter snapshotDescription 
-        tags: 
-          key1: value1
+- summary: Describe EBS snapshots
+  content:
+    apiVersion: v1
+    kind: Step
+    name: describe-snapshots
+    image: relaysh/aws-ebs-step-snapshots-describe
+    spec:
+      aws:
+        connection: !Connection { type: aws, name: my-aws-account }
+        region: !Parameter awsRegion
