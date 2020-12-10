@@ -1,4 +1,4 @@
-# Amazon Web Services Elastic Block Storage integration
+# AWS Elastic Block Storage integration
 
 Integration with Amazon Web Services Elastic Block Storage for Puppet Relay.
 
