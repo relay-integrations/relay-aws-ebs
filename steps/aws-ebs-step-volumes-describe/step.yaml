@@ -52,7 +52,7 @@ examples:
     content:
       apiVersion: v1
       kind: Step
-      name: describe-instances
+      name: describe-volumes
       image: relaysh/aws-ebs-step-volumes-describe
       spec:
         aws:
