@@ -43,9 +43,9 @@ schemas:
   spec:
     source: file
     file: spec.schema.json
-  output:
+  outputs:
     source: file
-    file: output.schema.json 
+    file: outputs.schema.json 
 
 examples:
   - summary: Create an EBS snapshot
