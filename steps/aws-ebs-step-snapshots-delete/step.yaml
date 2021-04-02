@@ -18,7 +18,7 @@ summary: Delete snapshots
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
-description: This AWS EBS step container deletes a list of Snapshot IDs
+description: Deletes a list of AWS EBS Snapshot IDs
 
 
 # URL or path relative to this file to an icon or icons representing this
