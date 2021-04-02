@@ -18,7 +18,7 @@ summary: Delete volumes
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
-description: This AWS EBS step container takes a list of volumes IDs you would like to delete in a given region
+description: Deletes a list of AWS EBS volumes IDs.
 
 
 # URL or path relative to this file to an icon or icons representing this
