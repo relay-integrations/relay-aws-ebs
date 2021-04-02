@@ -18,7 +18,7 @@ summary: Describe volumes
 
 # Single-paragraph explanation of what this action does in more detail.
 # Optional. Markdown.
-description: This AWS EBS step container returns a list of volumes in a given region
+description: Lists AWS EBS volumes in a given region.
 
 
 # URL or path relative to this file to an icon or icons representing this
